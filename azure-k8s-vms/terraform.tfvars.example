@@ -1,0 +1,28 @@
+# Example terraform.tfvars file
+# Copy this to terraform.tfvars and fill in your values
+
+resource_group_name = "my-k8s-cluster-rg"
+location            = "eastus"
+
+# REQUIRED: Your SSH public key
+# Generate with: ssh-keygen -t rsa -b 4096
+# Get the public key with: cat ~/.ssh/id_rsa.pub
+admin_ssh_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC... your-email@example.com"
+
+# Optional: Customize admin username
+# admin_username = "azureuser"
+
+# Optional: Customize VM sizes
+# cpu_vm_size = "Standard_D2s_v3"
+# gpu_vm_size = "Standard_NC6s_v3"
+
+# Optional: Customize networking
+# vnet_address_space      = ["10.0.0.0/16"]
+# subnet_address_prefixes = ["10.0.1.0/24"]
+
+# Optional: Add custom tags
+# tags = {
+#   Environment = "production"
+#   Purpose     = "k8s-cluster"
+#   Team        = "platform"
+# }
