@@ -18,8 +18,8 @@ The control plane VM has the following inbound rules to allow kubeadm operations
 - **Port 6443**: Kubernetes API Server
 - **Ports 2379-2380**: etcd server client API
 - **Port 10250**: Kubelet API
-- **Port 10259**: kube-scheduler
-- **Port 10257**: kube-controller-manager
+- **Port 10259**: kube-scheduler (secure port)
+- **Port 10257**: kube-controller-manager (secure port)
 - **Port 22**: SSH access
 
 ### Worker Nodes NSG Rules

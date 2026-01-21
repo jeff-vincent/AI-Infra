@@ -69,7 +69,7 @@ resource "azurerm_network_security_group" "control_plane" {
     destination_address_prefix = "*"
   }
 
-  # kube-scheduler
+  # kube-scheduler (secure port)
   security_rule {
     name                       = "allow-kube-scheduler"
     priority                   = 103
@@ -82,7 +82,7 @@ resource "azurerm_network_security_group" "control_plane" {
     destination_address_prefix = "*"
   }
 
-  # kube-controller-manager
+  # kube-controller-manager (secure port)
   security_rule {
     name                       = "allow-kube-controller"
     priority                   = 104
